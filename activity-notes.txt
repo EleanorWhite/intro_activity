@@ -1,0 +1,54 @@
+D
+1. Git help gives us a generic help page to understand how to use git.
+2. Git help - ag gives you the names of possible git tutorials and the full list of commands.
+
+E
+1. They are setting the default name and email in your terminal for future commits.
+2. This sets the default name and email for all repositories on this machine.
+
+F
+1. You can display a hidden file through ls -a.
+2. There are no hidden files to show.
+4. Git init created a directory.git that contains files.
+5. If we were to delete .git, we believe we would no longer be a git repository.
+6. You could look for the .git repository, and if it existed then it would be managed using git.
+
+G. 
+1. Git status reports whether there are any modified or untracked repositories that have not been committed, added but not committed or ignored.
+2. It tells git that the next time we commit, we want to commit names.txt.
+3. It commits all the currently tracked files with the commit message "Add our names."
+4. Git add . tells git that the next time we commit, to commit all of the files listed during git status. The . means to add all modified files in the directory.
+5. Git commit without -m takes you to a text editor where you can write a multi-line commit.
+6. Git commit, as you can have a multi line / extremely descriptive commuit message.
+7. Git log gives you the list of commits you have made.
+
+H.
+1. 
+Staged: names.txt
+Unstaged: movies.txt
+Untracked: food.txt
+2. It will commit names.txt
+3. Git add + the name of the file you want to add
+4. You run git reset <filename> to unstage changes.
+
+1. Git diff displays all of the changes in the unstaged files.
+2. Git diff --cached displays all the changes in the staged files.
+3. They worked!! We wrote git reset names.txt and git add movies.txt
+4. We observe that now movies.txt is shown under staged and unstaged. We believe this is because if we commit, it will commit the older already staged version, but not the new changes unless we add them.
+5. Names.txt now shows deleted under unstaged files. We believe this is because we deleted the files, but it won't actually commit till we stage it in git.
+6. Now, movies.txt appears deleted under unstaged, shows modified under staged, and last-movies shows under untracked. This because we have staged movies.txt and have not staged changing movies.txt to last-movies.txt. So, if we were to commit, the original changes made to movies.txt will commit. It deleted movies.txt and created a new file called last-movies.txt as git has not processed that they are the same file.
+7. The commands we did are as follows:
+git add .
+git commit -m "do somethings"
+git status
+8. It holds added but not committed files.
+9. We have this for version control, so we can have a commit that only contains the files we want.
+
+I
+1. It undoes your last commit but does not change your current repository.
+
+1. This deletes a commit while also changing the repository.
+2. The difference is --soft does not change the repository and --hard does.
+3. Head refers to the latest commit.
+4. Head^ refers to the commit before the last commit
+
